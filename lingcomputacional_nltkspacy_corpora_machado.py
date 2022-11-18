@@ -8,23 +8,23 @@ Original file is located at
 
 #PROPOSTA DE PROJETO: 
 
-Comparar a presença de advérbiação em romances e crônicas do corpus MACHADO do NLTK, fazer identificação de entidades nomeadas (NER) e TF-IDF para medir a relevância de um termo em um conjunto de documentos
+Comparar a presença de advérbiação em romances e crônicas do corpus 
+MACHADO do NLTK, fazer identificação de entidades nomeadas (NER) 
+e TF-IDF para medir a relevância de um termo em um conjunto de documentos
 """
 
 import statistics as stat
 
 import nltk
 nltk.download('all')
+nltk.download('stopwords')
+nltk.download('punkt')
 
 import re
-nltk.download('stopwords')
 
 from nltk.probability import FreqDist
 from nltk.tokenize import word_tokenize
-nltk.download('punkt')
-
 from nltk.corpus import machado
-
 from nltk.text import Text
 
 import spacy
@@ -40,7 +40,7 @@ nlp = spacy.load('pt_core_news_sm')
 """#Análise livro: DOM CASMURRO"""
 
 dom_casmurro = nltk.corpus.machado.raw('romance/marm08.txt') #ler OBRA DOM CASMURRO
-type(dom_casmurro)
+print(type(dom_casmurro))
 
 """#Pré-processamento do texto:limpeza do corpus com NLTK"""
 
@@ -54,7 +54,7 @@ sem_stopwords = [palavra for palavra in letras_min if palavra not in stop]
 
 # juntando os tokens novamente em formato de texto
 livro_limpo = " ".join(sem_stopwords)
-livro_limpo
+print(livro_limpo)
 
 # tokenizando 
 token_livro = word_tokenize(livro_limpo)
@@ -74,14 +74,16 @@ domcasmurro_text = Text(livro_limpo.split())
 
 domcasmurro_text.concordance('capitu')
 
-"""#Similaridade
+"""
+Similaridade
 
-
-
+temos uma lista de palavras que tendem a ocorrer no mesmo contexto 
+- Nesse caso, o contexto são apenas as palavras que ocorrem frequentemente de qualquer lado da palavra.
 """
 
-#temos uma lista de palavras que tendem a ocorrer no mesmo contexto - Nesse caso, o contexto são apenas as palavras que ocorrem frequentemente de qualquer lado da palavra.
- domcasmurro_text.similar('capitu')
+print('SIMILARIDADE DA PALAVRA: CAPITU')
+
+domcasmurro_text.similar('capitu')
 
 """#Bigramas
 Um bigrama ou digrama é uma sequência de dois elementos adjacentes de uma sequência de tokens, que normalmente são letras, sílabas ou palavras. 
