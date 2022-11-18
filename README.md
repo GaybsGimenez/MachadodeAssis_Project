@@ -4,7 +4,7 @@ Estudo das bibliotecas NLTK e scpaCy, corpora Machado
 # O que foi feito/estudado aqui: 
 
 ## Pré-processamento do texto: limpeza do corpus com NLTK
-- seleção apenas de caracteres não aufa-numéricos e padronição para todas as letras em minúsculo 
+- seleção apenas de caracteres não alfa-numéricos e padronização para todas as letras em minúsculo 
 - remoção de stopwords
 - junção dos tokens novamente em formato de texto
 - tokenização
@@ -16,7 +16,7 @@ Estudo das bibliotecas NLTK e scpaCy, corpora Machado
 - concordance()
 
 ## Similaridade
-- tmos uma lista de palavras que tendem a ocorrer no mesmo contexto 
+- temos uma lista de palavras que tendem a ocorrer no mesmo contexto 
   - Nesse caso, o contexto são apenas as palavras que ocorrem frequentemente de qualquer lado da palavra.
 
 ## Bigramas
@@ -32,7 +32,7 @@ São palavras no texto que possuem um sentido único estando juntas, podendo at�
 etiquetagem morfossintática de cada palavra desse corpora
 
 ## Gráficos
-biblioteca: matplotlib.pyplot - estatistica descritiva
+biblioteca: matplotlib.pyplot - estatística descritiva
 - Gráfico de barras simples
 
 ## Dicionário de ocorrência
