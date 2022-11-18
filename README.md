@@ -26,12 +26,12 @@ São palavras no texto que possuem um sentido único estando juntas, podendo at�
 
 - analisar a ocorrência das palavras ao longo de todo o texto - posição da lista em que a palavra aparece
 
-#COMPARANDO COM OUTRA COMPORA DO MESMO AUTOR
+# COMPARANDO COM OUTRA COMPORA DO MESMO AUTOR
 
-#Pos-tagging: 
+# Pos-tagging: 
 etiquetagem morfossintática de cada palavra desse corpora
 
-Gráficos
+## Gráficos
 biblioteca: matplotlib.pyplot - estatistica descritiva
 - Gráfico de barras simples
 
