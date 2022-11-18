@@ -1,7 +1,3 @@
-# MachadodeAssis_Project
-Estudo bibliotecas NLTK e spaCy
-
-
 # MachadodeAssis_project
 Estudo das bibliotecas NLTK e scpaCy, corpora Machado
 
